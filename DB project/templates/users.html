@@ -2,12 +2,11 @@
  
 {% block content %}
 
-    {% for i in news %}
-       
-    <div class="alert alert-dark" role="alert">
+    {% for i in users %}
+        
+    
+    <div class="alert alert-info" role="alert">
   		<h4>{{i[1]}}</h4>
-  		<hr>
-  		{{i[2]}}
 	</div>
     {% endfor %}
 

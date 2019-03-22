@@ -6,7 +6,6 @@
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
-            {{ form.signup}}
             {{ form.username.label }}<br>
             {{ form.username }}<br>
             {% for error in form.username.errors %}

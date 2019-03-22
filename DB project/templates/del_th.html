@@ -1,13 +1,12 @@
+
 {% extends "base.html" %}
  
 {% block content %}
 
     {% for i in news %}
-       
-    <div class="alert alert-dark" role="alert">
-  		<h4>{{i[1]}}</h4>
-  		<hr>
-  		{{i[2]}}
+        
+    <div class="alert alert-danger" role="alert">
+  		{{i[1]}}<a href='/delete_news/{{i[0]}}'  class="alert-link">  удалить</a>.
 	</div>
     {% endfor %}
 

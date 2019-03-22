@@ -2,12 +2,11 @@
  
 {% block content %}
 
-    {% for i in news %}
-       
-    <div class="alert alert-dark" role="alert">
-  		<h4>{{i[1]}}</h4>
-  		<hr>
-  		{{i[2]}}
+    {% for i in users %}
+        
+    
+    <div class="alert alert-danger" role="alert">
+  		{{i[1]}}<a href="/delete_user/{{i[0]}}" class="alert-link">  удалить</a>.
 	</div>
     {% endfor %}
 

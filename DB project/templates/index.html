@@ -2,15 +2,26 @@
  
 {% block content %}
 
-  <h1>Привет, {{ username }}!</h1>
-
-  <a href="/add_news">Добавить мысль</a>
-	{% for item in news %}
-	    <div class="alert alert-dark" role="alert">
-	        <h2>{{item[1]}}</h2>
-	        <div>{{item[2]}}</div>
-	        <a href="/delete_news/{{item[0]}}">Удалить мысль</a>
-	    </div>
-	{% endfor %}
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4">
+    	<img src="https://stickeroid.com/uploads/pic/050918/thumb/stickeroid_5bf5509cd1dfc.png" alt="error">
+    </div>
+    <div class="span11">
+      	<h1>Привет, {{ username }}!</h1>
+  		<br>
+  		<a href="/add_news" class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Добавить мысль</a>
+  		<br>
+  		<br>
+		{% for item in news %}
+	    	<div class="alert alert-dark" role="alert">
+	        	<h2>{{item[1]}}</h2>
+	        	<div>{{item[2]}}</div>
+	        	<a href="/delete_news/{{item[0]}}">Удалить мысль</a>
+	    	</div>
+		{% endfor %}
+    </div>
+  </div>
+</div>
 
 {% endblock %}

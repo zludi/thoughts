@@ -14,7 +14,7 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found 404'}), 404)
 
 
- @app.route('/')
+@app.route('/')
 def start():
     if 'username' in session:
         return redirect('/index')

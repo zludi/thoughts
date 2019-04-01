@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>{{title}}</title>
 </head>
-  <body>
+  <body style="background-color: #E2EDFA">
     <header>
-      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <nav class="navbar navbar-light" style="background-color: #A0C8F8">
         <a class="navbar-brand" href="/">
     <img src="https://images.vexels.com/media/users/3/127483/isolated/preview/932961439f83a1a480dd0fea60b2d71b-comic-speech-bubble-doodle-by-vexels.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Thoughts
@@ -17,7 +17,7 @@
         <a class="navbar-brand" href="/login">Sign up/Log in</a>
         {% if "username" in session %}
        
-        <a class="navbar-brand" href="/logout">{{session['username']}}</a>
+        <a class="navbar-brand" href="/logout">{{session['username']}} (выход)</a>
         
         
 		{% endif %}
@@ -25,6 +25,7 @@
     </header>
     <!-- Begin page content -->
     <main role="main" class="container">
+      <br>
         {% block content %}{% endblock %}
     </main>
   </body>
